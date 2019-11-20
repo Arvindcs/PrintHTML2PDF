@@ -66,12 +66,16 @@ class PreviewViewController: UIViewController {
     func showOptionsAlert() {
         let alertController = UIAlertController(title: "Yeah!", message: "Your invoice has been successfully printed to a PDF file.\n\nWhat do you want to do now?", preferredStyle: UIAlertController.Style.alert)
         
-          let actionPreview = UIAlertAction(title: "Preview it", style: UIAlertAction.Style.default) { (action) in
-                  if let filename = self.invoiceComposer.pdfFilename, let url = URL(string: filename) {
-                      let request = URLRequest(url: url)
-                      self.webPreview.loadRequest(request)
-                  }
-              }
+        let actionPreview = UIAlertAction(title: "Preview it", style: UIAlertAction.Style.default) { (action) in
+            DispatchQueue.main.async {
+                if let filename = self.invoiceComposer.pdfFilename, let url = URL(string: filename) {
+                    let request = URLRequest(url: url)
+                    self.webPreview.loadRequest(request)
+                }else {
+                    
+                }
+            }
+        }
         
         let actionEmail = UIAlertAction(title: "Send by Email", style: UIAlertAction.Style.default) { (action) in
             DispatchQueue.main.async {

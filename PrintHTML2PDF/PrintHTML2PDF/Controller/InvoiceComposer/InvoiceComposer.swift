@@ -37,7 +37,7 @@ class InvoiceComposer: NSObject {
 
     func renderInvoice(recipientInfo: String, label1: String, label2: String, label3: String) -> String! {
         // Store the invoice number for future use.
-        self.invoiceNumber = recipientInfo
+        self.invoiceNumber = label1
         
         do {
             // Load the invoice HTML template code into a String variable.

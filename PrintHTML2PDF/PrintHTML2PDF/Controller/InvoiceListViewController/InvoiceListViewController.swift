@@ -97,11 +97,11 @@ class InvoiceListViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == UITableViewCellEditingStyle.delete {
-//            invoices.remove(at: indexPath.row)
-//            tblInvoices.reloadData()
-//            UserDefaults.standard.set(self.invoices, forKey: "invoices")
-//        }
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            invoices.remove(at: indexPath.row)
+            tblInvoices.reloadData()
+            UserDefaults.standard.set(self.invoices, forKey: "invoices")
+        }
     }
     
     
