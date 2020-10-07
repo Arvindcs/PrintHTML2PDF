@@ -1,7 +1,7 @@
 ### Convert HTML to PDF 
 
 
-![Screenshot 1](https://github.com/Arvindcs/HTML-to-PDF/blob/master/img1.png)
+<img src="https://github.com/Arvindcs/HTML-to-PDF/blob/master/img1.png" width="300" />
 
 
-![Screenshot 2](https://github.com/Arvindcs/HTML-to-PDF/blob/master/img2.png)
+<img src="https://github.com/Arvindcs/HTML-to-PDF/blob/master/img2.png" width="300" />
